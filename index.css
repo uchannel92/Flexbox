@@ -1,0 +1,44 @@
+h1 {
+	text-align: center;
+}
+
+#container {
+	background-color: #003049;
+	width: 90%;
+	height: 500px;
+	margin: 10px auto;
+	border: 5px solid #003049;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+#container div {
+	width: 100px;
+	height: 100px;
+	font-size: 2em;
+	text-align: center;
+}
+
+#container-3 {
+	background-color: #003049;
+	width: 90%;
+	height: 500px;
+	margin: 10px auto;
+	border: 5px solid #003049;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-around;
+	align-items: center;
+	/*flex-wrap: wrap;*/
+}
+
+
+#container-3 div {
+	width: 50px;
+	height: 50px;
+	font-size: 2em;
+	text-align: center;
+}
