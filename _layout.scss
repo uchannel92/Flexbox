@@ -1,0 +1,23 @@
+@mixin navBar {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@mixin mainContainer {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    // margin-top: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin asideContainer {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

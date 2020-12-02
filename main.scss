@@ -1,0 +1,91 @@
+@import './variables';
+@import './layout';
+@import './components';
+
+body {
+    background-color: $bodyBg;
+}
+
+
+#nav-bar {
+    height: 50px;
+    background-color: $asideBg;
+}
+
+
+#main-section {
+    background-color: $mainContainer;
+    @include mainContainer();
+    margin-top: 40px;
+}
+
+#section {
+    height: 500px;
+    width: 200px;
+    background-color: $sectionBg;
+    flex-grow: 1;
+}
+
+#aside {
+    height: 500px;
+    width: 200px;
+    background-color: $asideBg;
+    @include asideContainer();
+}
+
+#internal-aside {
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 100px;
+    width: 90%;
+    background-color: $sectionBg;
+    
+}
+
+
+// Media Queries
+
+@media screen and (max-width: 750px) {
+    #main-section {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        padding-top: 20px;
+        background-color: $mainContainer;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    #section {
+        height: 500px;
+        width: 100%;
+        background-color: $sectionBg;
+        flex-grow: 1;
+        // margin-right: 15px;
+    }
+    
+    #aside {
+        height: 500px;
+        width: 100%;
+        background-color: $asideBg;
+        justify-self: flex-end;
+        // margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #internal-aside {
+        border-radius: 0px;
+        height: 100px;
+        width: 100%;
+        background-color: $sectionBg;
+        
+    }
+    
+}
