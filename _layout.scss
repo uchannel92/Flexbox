@@ -16,8 +16,15 @@
 }
 
 @mixin asideContainer {
-    justify-self: flex-end;
+    // justify-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+@mixin flexColumnCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+    align-items: center;
 }

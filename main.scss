@@ -4,13 +4,22 @@
 
 body {
     background-color: $bodyBg;
+    margin: 0px;
 }
 
 
 #nav-bar {
-    height: 50px;
-    background-color: $asideBg;
-}
+    background-color: $navBg;
+
+    li {
+         list-style-type: none;
+        a {
+            text-decoration: none;
+            color: $navTextColor;
+        }
+    }
+} 
+
 
 
 #main-section {
@@ -20,35 +29,64 @@ body {
 }
 
 #section {
-    height: 500px;
+    margin-right: 10px;
+    height: 700px;
     width: 200px;
     background-color: $sectionBg;
     flex-grow: 1;
 }
 
 #aside {
-    height: 500px;
+    margin-left: 10px;   
+    height: 700px;
     width: 200px;
     background-color: $asideBg;
     @include asideContainer();
+        
+    #internal-aside {
+        border-radius: 5px;
+        margin-top: 5px;
+        height: auto;
+        width: 90%;
+        background-color: $sectionBg;
+        ul li {
+            list-style: none;
+        }
+    }
 }
 
-#internal-aside {
-    border-radius: 5px;
-    margin-top: 5px;
-    height: 100px;
-    width: 90%;
-    background-color: $sectionBg;
-    
+
+// Footer Section
+
+#footer-main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 100%;
+    background-color: $footerBg;
+    @include flexColumnCenter(row);
+
+    .footer-section {
+        // background-color: #f5f5f5;
+        height: 180px;
+        flex-basis: 300px;
+            @include flexColumnCenter(column);
+            ul {
+                padding-left: 0px;
+            }
+            li {
+                list-style-type: none;
+            }
+    }
 }
 
 
-// Media Queries
+// Media Queries Media Queries currently paused for now
 
 @media screen and (max-width: 750px) {
     #main-section {
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         height: auto;
         padding-top: 20px;
         background-color: $mainContainer;
@@ -62,30 +100,63 @@ body {
 
 
     #section {
-        height: 500px;
+        margin-right: 0px;
+        max-height: 100%;
         width: 100%;
         background-color: $sectionBg;
         flex-grow: 1;
-        // margin-right: 15px;
+        
     }
     
     #aside {
-        height: 500px;
+        margin-left: 0px;
+        height: 700px;
         width: 100%;
         background-color: $asideBg;
         justify-self: flex-end;
-        // margin-right: 5px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+
+        #internal-aside {
+            border-radius: 0px;
+            height: auto;
+            width: 100%;
+            background-color: $sectionBg;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                i {
+                    font-size: $fabFontSize;
+                }
+            }
+        }
     }
 
-    #internal-aside {
-        border-radius: 0px;
-        height: 100px;
+    #footer-main {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 350px;
         width: 100%;
-        background-color: $sectionBg;
-        
+        // background-color: $footerBg;
+        @include flexColumnCenter(column);
+    
+        .footer-section {
+            // background-color: #f5f5f5; so i know how large the container is.
+            height: auto;
+            flex-basis: 100px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                ul {
+                    padding-left: 0px;
+                }
+                li {
+                    list-style-type: none;
+                }
+        }
     }
     
 }

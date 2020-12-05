@@ -1,0 +1,15 @@
+// Components: anything reusable such as buttons, navbars, cards etc.
+
+#nav-bar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
